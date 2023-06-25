@@ -29,13 +29,15 @@ const App = () => {
 
   return (
     <div className="container">
-      <h1>Employee List</h1>
-      <input className="search_box"
-        type="text"
-        placeholder="Search by first name"
-        value={searchText}
-        onChange={handleSearch}
-      />
+      <h1 className="heading">Employee List</h1>
+      <div className="search-box">
+        <input
+          type="text"
+          placeholder="Search by first name"
+          value={searchText}
+          onChange={handleSearch}
+        />
+      </div>
       <ul className="user-list">
         {filteredUsers.map((user) => (
           <li className="user-item" key={user.id}>
